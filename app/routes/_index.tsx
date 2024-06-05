@@ -29,10 +29,10 @@ export default function Index() {
 
   return (
     <div>
-      <div className="h-[600px] flex items-center p-40 flex-wrap max-w-[1520px]">
+      <div className="max-h-[600px] min-h-[600px] flex items-center p-40 flex-wrap max-w-[1520px] min-w-[1520px]">
         {listOfNormalCursors}
       </div>
-      <div className="h-[600px] flex items-center p-40 flex-wrap max-w-[1520px] gap-x-2 gap-y-2">
+      <div className="max-h-[600px] min-h-[600px] flex items-center p-40 flex-wrap max-w-[1520px] min-w-[1520px] gap-x-2 gap-y-2">
         {listOfProxmityCursors}
       </div>
     </div>
