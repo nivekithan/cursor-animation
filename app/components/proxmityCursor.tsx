@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const MAXIMUM_DISTANCE = 500;
+const MAXIMUM_DISTANCE = 200;
 
 export function ProxmityCursor() {
   const cursorRef = useRef<HTMLImageElement>(null);
@@ -26,7 +26,7 @@ export function ProxmityCursor() {
     console.log(distance);
 
     if (distance > MAXIMUM_DISTANCE) {
-      // setDegree(0 + 45);
+      setDegree(0);
       return;
     }
 
@@ -34,7 +34,7 @@ export function ProxmityCursor() {
 
     const angleInDegrees = angleInRadians * (180 / Math.PI);
 
-    setDegree(angleInDegrees + 45);
+    setDegree(angleInDegrees + 90);
   }
 
   useEffect(() => {
@@ -47,10 +47,14 @@ export function ProxmityCursor() {
 
   return (
     <img
-      src="https://designup.io/wp-content/themes/designup.io/img/up-arrow.svg"
+      src="https://www.svgrepo.com/download/110692/horizontal-line.svg"
       alt="Arrow"
       ref={cursorRef}
-      style={{ transform: `rotate(${degree}deg)` }}
+      style={{
+        transform: `rotate(${degree}deg)`,
+        width: "24px",
+        height: "24px",
+      }}
     />
   );
 }

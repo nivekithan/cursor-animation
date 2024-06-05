@@ -20,7 +20,7 @@ export default function Index() {
   }, []);
 
   const listOfProxmityCursors = useMemo(() => {
-    return Array(100)
+    return Array(296)
       .fill(0)
       .map((_, i) => {
         return <ProxmityCursor key={i} />;
@@ -32,7 +32,7 @@ export default function Index() {
       <div className="h-[600px] flex items-center p-40 flex-wrap max-w-[1520px]">
         {listOfNormalCursors}
       </div>
-      <div className="h-[600px] flex items-center p-40 flex-wrap max-w-[1520px]">
+      <div className="h-[600px] flex items-center p-40 flex-wrap max-w-[1520px] gap-x-2 gap-y-2">
         {listOfProxmityCursors}
       </div>
     </div>
